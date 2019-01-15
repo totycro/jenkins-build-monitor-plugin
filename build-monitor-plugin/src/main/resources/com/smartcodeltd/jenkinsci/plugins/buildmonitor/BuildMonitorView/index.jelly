@@ -96,20 +96,10 @@
                 <st:include page="main-settings.jelly"/>
             </header>
 
-            <j:choose>
-                <j:when test="${it.isEmpty()}">
-                    <main class="main empty">
-                        <div class="notice">
-                            <p>It seems a bit empty here... Maybe you'd like to <a href="configure">add some projects</a> to this Build Monitor?</p>
-                        </div>
-                    </main>
-                </j:when>
-                <j:otherwise>
-                    <main class="main ng-cloak">
-                        <st:include page="widgets.jelly" />
-                    </main>
-                </j:otherwise>
-            </j:choose>
+
+            <main class="main ng-cloak">
+                <st:include page="widgets.jelly" />
+            </main>
 
             <footer>
                 <div class="connectivity column">

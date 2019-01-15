@@ -1,0 +1,13 @@
+# Start docker container with volume:
+
+docker run -it -v `pwd`:/opt maven:3.2-jdk-8 bash
+
+
+# Run this is the docker container
+
+apt update ; apt install -y npm
+mvn package
+
+
+# Deploy this file manually in the advanced tab in the jenkins plugin manager
+build-monitor-plugin/target/build-monitor-plugin.hpi
